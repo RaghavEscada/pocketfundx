@@ -1,12 +1,12 @@
 import React from 'react';
-import { Briefcase, CheckCircle, DollarSign, Globe, Target, TrendingUp, Users, Sparkles, Award, Zap } from 'lucide-react';
+import { Briefcase, CheckCircle, DollarSign, Globe, Target, TrendingUp, Users, , Award,  } from 'lucide-react';
 
 const Metrics = () => {
     // Team data with photo URLs - replace with actual photos
     const teamMembers = [
         {
             name: "Dev Shah",
-            title: "Founder & Investment Lead",
+            title: "Founder",
             description: "Dev is the force behind every smart acquisition at Pocket Fund. He pulls the levers on investment strategy, runs point on deal negotiations, and has a sixth sense for spotting undervalued digital assets. Equal parts operator and visionary, Dev turns bold ideas into bankable businesses.",
             initials: "DS",
             photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format&q=80", // Replace with actual photo
@@ -70,7 +70,7 @@ const Metrics = () => {
                     <div className="text-center mb-20">
                         <div className="inline-flex items-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-blue-500/30 rounded-full px-8 py-4 mb-12 shadow-lg">
                             <TrendingUp className="w-6 h-6 text-blue-400 mr-3" />
-                            <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
+                          
                             <span className="text-sm font-semibold text-blue-400 tracking-wide">OUR IMPACT</span>
                         </div>
                         <h2 className="text-5xl md:text-7xl font-black mb-8 text-white tracking-tight">
@@ -283,7 +283,7 @@ const Metrics = () => {
 
                                                 {/* Status indicator */}
                                                 <div className={`absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br ${colors.gradient} rounded-full flex items-center justify-center border-4 border-slate-900 shadow-lg`}>
-                                                    <Zap className="w-4 h-4 text-white" />
+                                                   
                                                 </div>
                                             </div>
 
@@ -342,14 +342,14 @@ const Metrics = () => {
                         </div>
                         <div className="text-center group">
                             <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-emerald-600/30 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <Zap className="w-8 h-8 text-emerald-400" />
+                              
                             </div>
                             <div className="text-4xl font-black text-emerald-400 mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
                             <div className="text-gray-300 font-semibold">Dedication</div>
                         </div>
                         <div className="text-center group">
                             <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-yellow-600/30 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <Sparkles className="w-8 h-8 text-yellow-400" />
+                              
                             </div>
                             <div className="text-4xl font-black text-yellow-400 mb-2 group-hover:scale-110 transition-transform duration-300">∞</div>
                             <div className="text-gray-300 font-semibold">Innovation</div>
