@@ -65,7 +65,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     <div className="max-w-2xl">
                         <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-8">
                             <p className="text-sm text-blue-400 font-medium uppercase tracking-wider">
-                                Done For You System
+                                Our Process
                             </p>
                         </div>
 

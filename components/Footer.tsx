@@ -142,6 +142,17 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        <div className="mt-6 flex justify-center">
+          <a
+            href="https://calendly.com/adarsh12ranjan/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow transition-all duration-300"
+          >
+            Book a Call
+          </a>
+        </div>
       </div>
     </footer>
   );

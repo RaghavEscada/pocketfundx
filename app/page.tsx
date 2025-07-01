@@ -5,10 +5,12 @@ import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
 import Clients from "@/components/Clients";
-import RecentProjects from "@/components/RecentProjects";
+import Testimonial from "@/components/Testimonial";
+
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Horizontal from "@/components/horizontal";
 import TimelineDemo from "@/components/ui/timeline";
+import Metrics from "@/components/Metrics";
 
 const Home = () => {
   return (
@@ -30,18 +32,48 @@ const Home = () => {
         <TimelineDemo />
       </div>
 
-      {/* Main content sections */}
-      <div className="relative">
+      {/* Grid Section - About/Team */}
+     
 
-        <div id="recentprojects">
-          <RecentProjects />
-        </div>
-        <div id="testimonial">
-          <Clients />
+      {/* Main Content Sections */}
+      <section className="relative w-full">
+        {/* Recent Projects */}
+        <div className="py-24 bg-slate-900" id="recentprojects">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Metrics />
+          </div>
         </div>
 
-        <Footer />
-      </div>
+        {/* Testimonials */}
+        <div className="py-24 bg-gradient-to-b from-slate-800 to-slate-900" id="testimonial">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Testimonial />
+          </div>
+        </div>
+
+        {/* Calendly Embed Section */}
+        <div className="py-16 bg-slate-900 flex justify-center">
+          <div className="bg-white rounded-3xl shadow-xl border border-gray-200 p-4 max-w-2xl w-full">
+            <iframe
+              src="https://calendly.com/adarsh12ranjan/30min"
+              width="100%"
+              height="600"
+              frameBorder="0"
+              className="rounded-2xl w-full"
+              style={{ minHeight: '500px' }}
+              title="Book a 30min Call with Adarsh"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="bg-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Footer />
+          </div>
+        </div>
+      </section>
     </main>
   );
 };

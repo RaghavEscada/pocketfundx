@@ -264,50 +264,106 @@ const Hero = () => {
       `}</style>
 
       {/* Hero Section */}
-      <div className="min-h-screen w-full flex flex-col justify-center items-center bg-white py-12">
-        <div className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-12 px-6 md:px-12">
-          {/* Left: Headline, Subheadline, Description, CTA */}
-          <div className="flex-1 flex flex-col items-start justify-center text-left space-y-6 max-w-xl">
-            <div className="flex items-center gap-3 mb-2">
-              <span className="inline-block bg-blue-100 text-blue-700 text-xs font-semibold rounded-full px-4 py-1">First-of-its-kind Micro Private Equity Firm</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-500 leading-tight">
-              Pocket Fund
-            </h1>
-            <div className="text-2xl md:text-3xl text-gray-700 font-medium flex items-center gap-2">
-              Transforms Ideas & Acquisitions Into
-              <span className="inline-block align-middle">
-                <ContainerTextFlip
-                  words={["Growing Assets", "Market Leaders", "Smart Investments", "Success Stories"]}
-                  interval={1400}
-                  animationDuration={300}
-                  className="px-4 py-2 rounded-lg font-bold shadow text-red-900"
-                />
-              </span>
-            </div>
-            <div className="text-lg text-gray-700 font-medium mt-2">
-              Pocket Fund bridges the gap between ambitious buyers and quality deals
-            </div>
-            <div className="text-base text-gray-500">
-              End-to-end acquisition advisory for digital businesses under $10M. From sourcing and diligence to post-acquisition scale.<br />
-              Complete end to end acquisition support.
-            </div>
-            <div className="flex gap-4 mt-4">
-              <button className="px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg shadow hover:bg-blue-800 transition">Start Your Acquisition</button>
-              <button className="px-6 py-3 border border-blue-200 text-blue-700 rounded-lg bg-white hover:bg-blue-50 transition">Watch Process</button>
-            </div>
-          </div>
-          {/* Right: Image */}
-          <div className="flex-1 flex items-center justify-center w-full md:w-auto">
-            <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-200 bg-white max-w-2xl w-full aspect-[16/9] flex items-center justify-center">
-              <Image
-                src="/pe.webp"
-                alt="Pocket Fund Logo"
-                width={800}
-                height={450}
-                className="object-cover w-full h-full"
-                priority
-              />
+      <div className="min-h-screen w-full relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
+        {/* Enhanced Creative Moving Grid Background */}
+        <MovingGridBackground />
+
+        {/* Blue ambient lighting */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl floating" />
+          <div
+            className="absolute bottom-20 right-20 w-80 h-80 bg-blue-300/8 rounded-full blur-3xl"
+            style={{ animation: "float 12s ease-in-out infinite reverse" }}
+          />
+        </div>
+
+        <div className="relative z-10 min-h-screen flex flex-col pt-20 md:pt-24">
+          {/* Main Content Section */}
+          <div className="flex-1 flex flex-col justify-center px-6 md:px-12 py-2">
+            <div className="max-w-5xl mx-auto text-center space-y-4">
+
+              {/* Enhanced Badge - Now with proper top spacing */}
+              <div
+                className={`inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-lg hover:scale-105 hover:bg-white/15 transition-all duration-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
+                  }`}
+              >
+                <span className="text-sm font-medium text-white/90 tracking-wide">
+                  #1 Micro Private Equity Firm
+                </span>
+              </div>
+
+              {/* Enhanced Main Heading */}
+              <div className="space-y-3">
+                <h1
+                  className={`text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight transition-all duration-800 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                    }`}
+                >
+                  <span className="block font-bold">
+                    <div className="mx-auto h-20 md:h-28 lg:h-32 w-auto flex items-center justify-center px-8 py-2 shadow-xl">
+                      <div className="flex items-center space-x-4">
+                        <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-blue-500 drop-shadow-2xl text-4xl md:text-6xl lg:text-7xl xl:text-8xl">
+                          Pocket Fund
+                        </span>
+                      </div>
+                    </div>
+                  </span>
+
+                  <span
+                    className={`block text-xl md:text-3xl lg:text-4xl mt-2 font-normal text-white/80 transition-all duration-600 ${isVisible ? "opacity-100" : "opacity-0"
+                      }`}
+                  >
+                    Transforms Aquisitions Into
+                  </span>
+
+                  <div
+                    className={`mt-3 transition-all duration-600 ${isVisible ? "opacity-100" : "opacity-0"
+                      }`}
+                  >
+                    <ContainerTextFlip
+                      words={["Smart Investments", "Growing Assets", "Market Leaders", "Success Stories"]}
+                      interval={1400}
+                      animationDuration={300}
+                      className="bg-blue-900/30 backdrop-blur-sm border border-blue-400/30 rounded-xl px-8 py-4 shadow-2xl"
+                    />
+                  </div>
+                </h1>
+              </div>
+
+              {/* Enhanced Description */}
+              <div
+                className={`space-y-1 max-w-3xl mx-auto transition-all duration-600 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+                  }`}
+              >
+                <p className="text-lg text-white/80 font-medium">
+                  Pocket Fund bridges the gap between ambitious buyers and quality deals
+                </p>
+                <p className="text-base text-white/60">
+                  End-to-end acquisition advisory for digital businesses under $10M. From sourcing and diligence to post-acquisition scale.<br />
+                  Complete end to end acquisition support.
+                </p>
+              </div>
+
+              {/* Enhanced CTAs */}
+              <div
+                className={`flex flex-row gap-4 justify-center pt-4 transition-all duration-600 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+                  }`}
+              >
+                <button className="group relative px-6 py-2.5 bg-white text-blue-900 font-semibold rounded-lg overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 transition-all duration-300">
+                  <span className="relative z-10 flex items-center">
+                    Start Your Acquisition
+                    <div className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </span>
+                </button>
+
+                <button className="px-6 py-2.5 border border-white/30 text-white rounded-lg backdrop-blur-sm hover:bg-white/10 hover:border-white/50 hover:scale-105 hover:shadow-lg hover:shadow-white/10 active:scale-95 transition-all duration-300">
+                  <span className="flex items-center">
+                    <Play className="mr-2 w-4 h-4" />
+                    Watch Process
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -333,12 +389,12 @@ const Hero = () => {
               </div>
 
               <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16">
-                We help you acquire high-potential businesses under $10M.
+                We help serious buyers acquire high-potential online businesses under $10M with full-service support.
               </p>
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
-              Core Services
+              5 Core Services
             </h2>
             <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
               End-to-end acquisition support from deal sourcing to exit preparation.
