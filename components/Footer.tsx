@@ -43,13 +43,13 @@ const Footer = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="mailto:hello@pocketfund.co"
+                href="/#contact"
                 className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg text-sm font-medium transition-colors text-center"
               >
                 Get in Touch
               </a>
               <a
-                href="https://calendly.com/pocketfund"
+                href="/#contact"
                 className="border border-blue-500 hover:bg-blue-500/10 px-6 py-2 rounded-lg text-sm font-medium transition-colors text-center"
               >
                 Book a Call
@@ -145,7 +145,7 @@ const Footer = () => {
 
         <div className="mt-6 flex justify-center">
           <a
-            href="https://calendly.com/adarsh12ranjan/30min"
+            href="/#contact"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow transition-all duration-300"

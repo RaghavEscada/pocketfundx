@@ -164,12 +164,12 @@ const About = () => {
 
                 {/* CTA Button */}
                 <div className="pt-4 animate-[fadeInUp_0.8s_ease-out_0.4s_both]">
-                  <button className="group flex items-center text-white text-lg font-medium hover:text-white transition-colors duration-300">
+                  <a href="/#contact" className="group flex items-center text-white text-lg font-medium hover:text-white transition-colors duration-300">
                     <span className="border-b-2 border-white group-hover:border-white transition-colors duration-300 pb-1">
                       Start Your Journey Today
                     </span>
                     <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                  </button>
+                  </a>
                 </div>
               </div>
 

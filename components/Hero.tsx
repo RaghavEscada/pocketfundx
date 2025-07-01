@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ArrowRight, Target, TrendingUp, Users, Award, Briefcase, Play, DollarSign, Search, FileText, Handshake, UserCheck, BarChart3 } from "lucide-react";
-import Image from "next/image";
-import LottiePlayer from "./ui/LottiePlayer";
+import { ArrowRight, Target, TrendingUp, Users, Award, Briefcase, Play, DollarSign, Search, FileText, Handshake, UserCheck, BarChart3, ChevronDown } from "lucide-react";
 
 // Enhanced Mouse Position Hook
 interface MousePosition {
@@ -43,7 +41,7 @@ export interface ContainerTextFlipProps {
 }
 
 export function ContainerTextFlip({
-  words = ["Smart Investors", "Wealth Builders", "Deal Makers", "Industry Leaders"],
+  words = ["Growing Assets", "Market Leaders", "Success Stories"],
   interval = 2500,
   className,
   textClassName,
@@ -68,76 +66,35 @@ export function ContainerTextFlip({
     <div className="relative inline-block">
       <span
         className={cn(
-          "inline-block text-2xl md:text-4xl lg:text-5xl font-bold transition-all duration-500",
-          "bg-gradient-to-r from-blue-200 via-white to-blue-200 bg-clip-text text-transparent",
-          "drop-shadow-lg shimmer-text",
-          isAnimating ? "opacity-0 transform translate-y-4 scale-95" : "opacity-100 transform translate-y-0 scale-100",
+          "inline-block text-xl md:text-2xl lg:text-3xl font-bold transition-all duration-500",
+          "bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 bg-clip-text text-transparent",
+          "drop-shadow-sm",
+          isAnimating ? "opacity-0 transform translate-y-2 scale-95" : "opacity-100 transform translate-y-0 scale-100",
           className,
         )}
       >
         {words[currentWordIndex]}
       </span>
-
-      {/* Subtle glow effect */}
-      <div className="absolute inset-0 blur-xl opacity-20 bg-gradient-to-r from-blue-400 to-white rounded-lg pulse-glow" />
     </div>
   );
 }
 
-// Simple Moving Grid Background
-const MovingGridBackground = () => {
+// Lottie Player Component - Using your exact iframe with optimal size
+const LottiePlayer = ({ src }: { src: string }) => {
   return (
-    <div className="absolute inset-0 overflow-hidden">
-      {/* Single clean moving grid */}
-      <div className="absolute inset-0 opacity-50 moving-grid" />
-
-      {/* Subtle blue accent */}
-      <div className="absolute inset-0 opacity-10 pulse-blue" />
+    <div className="w-full h-full rounded-2xl overflow-hidden">
+      <iframe
+        src="https://cdn.lottielab.com/l/5Gn1jXUt1kSREm.html"
+        className="w-full h-full border-0"
+        title="Lottie Animation"
+        frameBorder="0"
+        style={{ minHeight: '380px' }}
+      />
     </div>
   );
 };
 
-// Compact Logo Cloud - Financial Services & Private Equity
-const logos1 = [
-  { name: "Babel", url: "https://svgl.app/library/babel.svg" },
-  { name: "Ngrok", url: "https://svgl.app/library/ngrok-light.svg" },
-  { name: "Webflow", url: "https://svgl.app/library/webflow.svg" },
-  { name: "Perplexity", url: "https://svgl.app/library/perplexity_wordmark_light.svg" },
-  { name: "Sanity", url: "https://svgl.app/library/sanity.svg" },
-  { name: "Post CSS", url: "https://svgl.app/library/postcss_wordmark.svg" },
-];
-
-const LogoMarquee = ({ logos, direction = "left", speed = 25 }: { logos: any[], direction?: "left" | "right", speed?: number }) => {
-  return (
-    <div className="relative overflow-hidden py-1">
-      <div className={`flex gap-6 whitespace-nowrap ${direction === "left" ? "marquee-left" : "marquee-right"}`}>
-        {Array(6).fill(null).map((_, index) => (
-          <div key={index} className="flex gap-6 shrink-0">
-            {logos.map((logo, logoIndex) => (
-              <div
-                key={logoIndex}
-                className="flex items-center justify-center h-10 w-28 rounded-lg px-3 py-1.5 hover:scale-105 hover:-translate-y-1 transition-all duration-200"
-              >
-                <Image
-                  src={logo.url}
-                  alt={`${logo.name} logo`}
-                  className="h-6 w-auto max-w-20 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    target.parentElement!.innerHTML = `<span class="text-xs font-semibold text-gray-700">${logo.name}</span>`;
-                  }}
-                />
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-// Animation component to replace framer-motion
+// Animation component
 const AnimatedDiv = ({
   children,
   className = "",
@@ -183,6 +140,120 @@ const AnimatedDiv = ({
   );
 };
 
+// Enhanced Deal Flow Section
+const DealFlowSection = () => {
+  return (
+    <div className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+                           radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)`
+        }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <AnimatedDiv className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            How We Connect
+            <span className="block text-blue-600 mt-2">Buyers & Deals</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Our proprietary platform matches ambitious buyers with quality digital businesses
+          </p>
+        </AnimatedDiv>
+
+        {/* Enhanced Deal Flow Diagram */}
+        <div className="relative max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            {/* Sources */}
+            <AnimatedDiv delay={100} className="text-center">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Search className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Deal Sources</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Multiple acquisition channels including brokerages, direct outreach, and exclusive networks
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Brokerages</span>
+                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Direct</span>
+                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Networks</span>
+                </div>
+              </div>
+            </AnimatedDiv>
+
+            {/* Pocket Fund Hub */}
+            <AnimatedDiv delay={200} className="text-center relative">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 shadow-2xl text-white relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl font-bold">PF</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">Pocket Fund</h3>
+                  <p className="text-blue-100 text-sm leading-relaxed mb-4">
+                    AI-powered matching engine with comprehensive due diligence and deal structuring
+                  </p>
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-xs text-blue-200">Active Matching</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Connection Lines */}
+              <div className="hidden md:block absolute top-1/2 -left-12 w-8 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 transform -translate-y-1/2"></div>
+              <div className="hidden md:block absolute top-1/2 -right-12 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-purple-400 transform -translate-y-1/2"></div>
+            </AnimatedDiv>
+
+            {/* Buyers */}
+            <AnimatedDiv delay={300} className="text-center">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Qualified Buyers</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Vetted investors, entrepreneurs, and operators ready to acquire and scale businesses
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Investors</span>
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Operators</span>
+                  <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Entrepreneurs</span>
+                </div>
+              </div>
+            </AnimatedDiv>
+          </div>
+
+          {/* Stats Bar */}
+          <AnimatedDiv delay={400} className="mt-16 bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                <div className="text-sm text-gray-600">Active Deals</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-green-600 mb-2">$2.5M</div>
+                <div className="text-sm text-gray-600">Avg Deal Size</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">90%</div>
+                <div className="text-sm text-gray-600">Match Success</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-orange-600 mb-2">45</div>
+                <div className="text-sm text-gray-600">Days Avg Close</div>
+              </div>
+            </div>
+          </AnimatedDiv>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Main Hero Component
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -207,30 +278,6 @@ const Hero = () => {
           0%, 100% { opacity: 0.2; transform: scale(0.8); }
           50% { opacity: 0.4; transform: scale(1.1); }
         }
-        @keyframes moveGrid {
-          0% { background-position: 0% 0%; }
-          100% { background-position: 60px 60px; }
-        }
-        @keyframes pulseBlue {
-          0%, 100% { opacity: 0.05; }
-          50% { opacity: 0.15; }
-        }
-        @keyframes marqueeLeft {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-800px); }
-        }
-        @keyframes marqueeRight {
-          0% { transform: translateX(-800px); }
-          100% { transform: translateX(0); }
-        }
-        @keyframes slideRight {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
-        }
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.5; }
-        }
         @keyframes bounce {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-8px); }
@@ -238,166 +285,101 @@ const Hero = () => {
         
         .floating { animation: float 6s ease-in-out infinite; }
         .pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
-        .moving-grid {
-          background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 1px, transparent 1px);
-          background-size: 60px 60px;
-          animation: moveGrid 25s linear infinite;
-        }
-        .pulse-blue {
-          background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
-          animation: pulseBlue 8s ease-in-out infinite;
-        }
-        .marquee-left {
-          animation: marqueeLeft 25s linear infinite;
-        }
-        .marquee-right {
-          animation: marqueeRight 25s linear infinite;
-        }
-        .shimmer-text {
-          background-size: 200% 200%;
-          background-position: 0% 50%;
-          animation: shimmer 3s ease-in-out infinite alternate;
-        }
         .duration-800 { transition-duration: 800ms; }
         .duration-600 { transition-duration: 600ms; }
       `}</style>
 
+
+
       {/* Hero Section */}
-      <div className="min-h-screen w-full relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
-        {/* Enhanced Creative Moving Grid Background */}
-        <MovingGridBackground />
+      <div className="min-h-screen flex flex-col justify-center bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-20">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Content */}
+            <div className="space-y-8">
+              {/* Badge */}
+              <AnimatedDiv className="inline-flex items-center bg-blue-100 border border-blue-200 rounded-full px-6 py-3 mb-8">
+                <Award className="w-5 h-5 text-blue-600 mr-3" />
+                <span className="text-sm font-semibold text-blue-800">First-of-its-kind Micro Private Equity Firm</span>
+              </AnimatedDiv>
 
-        {/* Blue ambient lighting */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl floating" />
-          <div
-            className="absolute bottom-20 right-20 w-80 h-80 bg-blue-300/8 rounded-full blur-3xl"
-            style={{ animation: "float 12s ease-in-out infinite reverse" }}
-          />
-        </div>
-
-        <div className="relative z-10 min-h-screen flex flex-col pt-20 md:pt-24">
-          {/* Main Content Section */}
-          <div className="flex-1 flex flex-col justify-center px-6 md:px-12 py-2">
-            <div className="max-w-5xl mx-auto text-center space-y-4">
-
-              {/* Enhanced Badge - Now with proper top spacing */}
-              <div
-                className={`inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-lg hover:scale-105 hover:bg-white/15 transition-all duration-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
-                  }`}
-              >
-                <span className="text-sm font-medium text-white/90 tracking-wide">
-                  #1 Micro Private Equity Firm
-                </span>
-              </div>
-
-              {/* Enhanced Main Heading */}
-              <div className="space-y-3">
-                <h1
-                  className={`text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight transition-all duration-800 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                    }`}
-                >
-                  <span className="block font-bold">
-                    <div className="mx-auto h-20 md:h-28 lg:h-32 w-auto flex items-center justify-center px-8 py-2 shadow-xl">
-                      <div className="flex items-center space-x-4">
-                        <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-blue-500 drop-shadow-2xl text-4xl md:text-6xl lg:text-7xl xl:text-8xl">
-                          Pocket Fund
-                        </span>
-                      </div>
-                    </div>
-                  </span>
-
-                  <span
-                    className={`block text-xl md:text-3xl lg:text-4xl mt-2 font-normal text-white/80 transition-all duration-600 ${isVisible ? "opacity-100" : "opacity-0"
-                      }`}
-                  >
-                    Transforms Aquisitions Into
-                  </span>
-
-                  <div
-                    className={`mt-3 transition-all duration-600 ${isVisible ? "opacity-100" : "opacity-0"
-                      }`}
-                  >
-                    <ContainerTextFlip
-                      words={["Smart Investments", "Growing Assets", "Market Leaders", "Success Stories"]}
-                      interval={1400}
-                      animationDuration={300}
-                      className="bg-blue-900/30 backdrop-blur-sm border border-blue-400/30 rounded-xl px-8 py-4 shadow-2xl"
-                    />
-                  </div>
+              {/* Main Headline */}
+              <AnimatedDiv delay={100}>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                  <span className="text-blue-600">Pocket Fund</span>
                 </h1>
-              </div>
+              </AnimatedDiv>
 
-              {/* Enhanced Description */}
-              <div
-                className={`space-y-1 max-w-3xl mx-auto transition-all duration-600 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-                  }`}
-              >
-                <p className="text-lg text-white/80 font-medium">
+              {/* Dynamic Subheadline */}
+              <AnimatedDiv delay={200} className="text-2xl md:text-3xl text-gray-700 font-medium">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span>Transforms Ideas Into</span>
+                  <ContainerTextFlip
+                    words={["Growing Assets", "Market Leaders", "Success Stories"]}
+                    interval={1800}
+                    animationDuration={400}
+                  />
+                </div>
+              </AnimatedDiv>
+
+              {/* Value Proposition */}
+              <AnimatedDiv delay={300}>
+                <p className="text-xl text-gray-600 leading-relaxed">
                   Pocket Fund bridges the gap between ambitious buyers and quality deals
                 </p>
-                <p className="text-base text-white/60">
-                  End-to-end acquisition advisory for digital businesses under $10M. From sourcing and diligence to post-acquisition scale.<br />
-                  Complete end to end acquisition support.
+              </AnimatedDiv>
+
+              {/* Description */}
+              <AnimatedDiv delay={400}>
+                <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
+                  End-to-end acquisition advisory for digital businesses under $10M. From sourcing and diligence to post-acquisition scale with complete acquisition support.
                 </p>
-              </div>
+              </AnimatedDiv>
 
-              {/* Enhanced CTAs */}
-              <div
-                className={`flex flex-row gap-4 justify-center pt-4 transition-all duration-600 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-                  }`}
-              >
-                <button className="group relative px-6 py-2.5 bg-white text-blue-900 font-semibold rounded-lg overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 transition-all duration-300">
-                  <span className="relative z-10 flex items-center">
-                    Start Your Acquisition
-                    <div className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </span>
+              {/* CTA Buttons */}
+              <AnimatedDiv delay={500} className="flex flex-col sm:flex-row gap-4 pt-4">
+                <button className="group px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+                  Start Your Acquisition
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
-
-                <button className="px-6 py-2.5 border border-white/30 text-white rounded-lg backdrop-blur-sm hover:bg-white/10 hover:border-white/50 hover:scale-105 hover:shadow-lg hover:shadow-white/10 active:scale-95 transition-all duration-300">
-                  <span className="flex items-center">
-                    <Play className="mr-2 w-4 h-4" />
-                    Watch Process
-                  </span>
+                <button className="group px-8 py-4 border-2 border-gray-200 text-gray-700 bg-white rounded-xl hover:border-blue-200 hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2">
+                  <Play className="w-5 h-5" />
+                  Watch Our Process
                 </button>
-              </div>
+              </AnimatedDiv>
             </div>
+
+            {/* Right: Enhanced Visual */}
+            <AnimatedDiv delay={600} className="flex items-center justify-center">
+              <div className="relative w-full max-w-xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-white/10 backdrop-blur-sm">
+                  <div className="aspect-square h-[360px] md:h-[440px] lg:h-[520px]">
+                    <LottiePlayer src="https://cdn.lottielab.com/l/5Gn1jXUt1kSREm.json" />
+                  </div>
+                </div>
+              </div>
+            </AnimatedDiv>
           </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="text-center pb-8">
+          <ChevronDown className="w-6 h-6 text-gray-400 mx-auto animate-bounce" />
         </div>
       </div>
 
-      {/* Deal Matching Section with Enhanced Flow Lines */}
-      <div className="py-4 bg-white w-full relative z-20">
-        <div className="w-full px-2 flex flex-col items-center">
-          <div className="w-full max-w-5xl mx-auto rounded-2xl shadow-lg bg-white flex items-center justify-center" style={{ minHeight: '180px', padding: '1rem 0' }}>
-            <LottiePlayer src="https://cdn.lottielab.com/l/5Gn1jXUt1kSREm.json" />
-          </div>
-        </div>
-      </div>
+
 
       {/* 5 Core Services Section */}
-      <div className="pt-8 md:pt-20 lg:pt-32 xl:pt-48 pb-32 bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="py-24 bg-gradient-to-b from-gray-900 to-gray-800">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedDiv className="text-center mb-20">
-            <div className="max-w-8xl mx-auto text-center">
-              <div className="inline-flex items-center bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-full px-8 py-4 mb-12 shadow-2xl">
-                <Award className="w-6 h-6 text-blue-400 mr-3" />
-                <span className="text-sm font-medium text-gray-300 tracking-wide">First-of-its-kind Micro Private Equity Firm</span>
-              </div>
-
-              <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16">
-                We help serious buyers acquire high-potential online businesses under $10M with full-service support.
-              </p>
-            </div>
-
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
-              5 Core Services
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Core Services
             </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-              End-to-end acquisition support from deal sourcing to exit preparation.
+            <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+              End-to-end acquisition support from deal sourcing to exit preparation
             </p>
           </AnimatedDiv>
 
@@ -406,53 +388,55 @@ const Hero = () => {
               {
                 icon: Search,
                 title: "Deal Sourcing",
-                description: "Off-market focus with exclusive deal flow and proprietary networks"
+                description: "Off-market focus with exclusive deal flow and proprietary networks",
+                color: "from-blue-500 to-blue-600"
               },
               {
                 icon: FileText,
                 title: "Due Diligence",
-                description: "Technical, financial, and operational analysis with comprehensive risk assessment"
+                description: "Technical, financial, and operational analysis with comprehensive risk assessment",
+                color: "from-green-500 to-green-600"
               },
               {
                 icon: Handshake,
                 title: "Deal Structuring & Negotiation",
-                description: "Optimal terms negotiation and transaction structure optimization"
+                description: "Optimal terms negotiation and transaction structure optimization",
+                color: "from-purple-500 to-purple-600"
               },
               {
                 icon: UserCheck,
                 title: "Transition + Operator Placement",
-                description: "Seamless handover with vetted operator matching and integration support"
+                description: "Seamless handover with vetted operator matching and integration support",
+                color: "from-orange-500 to-orange-600"
               },
               {
                 icon: BarChart3,
                 title: "Growth Playbooks + Exit Prep",
-                description: "Strategic growth roadmaps and exit strategy preparation for maximum value"
+                description: "Strategic growth roadmaps and exit strategy preparation for maximum value",
+                color: "from-pink-500 to-pink-600"
               }
             ].map((service, index) => (
               <AnimatedDiv
                 key={index}
-                className={`bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center hover:border-blue-500/50 transition-all duration-500 group hover:scale-105 ${hoveredFeature === index ? 'shadow-2xl shadow-blue-500/25' : ''} ${index === 4 ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''}`}
-                delay={index * 150}
+                className={`bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center hover:border-gray-600 transition-all duration-500 group hover:scale-105 hover:shadow-2xl ${index === 4 ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''}`}
+                delay={index * 100}
                 from="opacity-0 translate-y-12"
                 to="opacity-100 translate-y-0"
               >
                 <div
-                  className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:scale-110 hover:rotate-3 transition-transform duration-300"
+                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6 hover:scale-110 hover:rotate-3 transition-transform duration-300 shadow-lg`}
                   onMouseEnter={() => setHoveredFeature(index)}
                   onMouseLeave={() => setHoveredFeature(null)}
                 >
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-400 leading-relaxed text-sm">{service.description}</p>
+                <p className="text-gray-300 leading-relaxed">{service.description}</p>
               </AnimatedDiv>
             ))}
           </div>
         </div>
       </div>
-
-
-
     </div>
   );
 };

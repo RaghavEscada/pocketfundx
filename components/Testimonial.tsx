@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import Image from "next/image";
+// Removed Next.js Image import since we'll use regular img tags
 
 const testimonials = [
     {
@@ -122,8 +122,10 @@ const Testimonial = () => {
                             {/* Author info */}
                             <div className="flex flex-col items-center space-y-3 pt-4">
                                 <div className="relative">
-                                    <Image
+                                    <img
                                         src={image}
+                                        width={64}
+                                        height={64}
                                         alt={`${name} avatar`}
                                         className="w-16 h-16 rounded-full object-cover border-4 border-blue-100 shadow-lg"
                                     />
@@ -164,8 +166,8 @@ const Testimonial = () => {
                         <button
                             key={index}
                             className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial
-                                    ? 'bg-blue-500 scale-125'
-                                    : 'bg-slate-300 hover:bg-slate-400'
+                                ? 'bg-blue-500 scale-125'
+                                : 'bg-slate-300 hover:bg-slate-400'
                                 }`}
                             onClick={() => setCurrentTestimonial(index)}
                             aria-label={`Go to testimonial ${index + 1}`}

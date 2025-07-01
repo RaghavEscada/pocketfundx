@@ -33,7 +33,7 @@ const Home = () => {
       </div>
 
       {/* Grid Section - About/Team */}
-     
+
 
       {/* Main Content Sections */}
       <section className="relative w-full">
@@ -52,7 +52,7 @@ const Home = () => {
         </div>
 
         {/* Calendly Embed Section */}
-        <div className="py-16 bg-slate-900 flex justify-center">
+        <div id="contact" className="py-16 bg-slate-900 flex justify-center">
           <div className="bg-white rounded-3xl shadow-xl border border-gray-200 p-4 max-w-2xl w-full">
             <iframe
               src="https://calendly.com/adarsh12ranjan/30min"

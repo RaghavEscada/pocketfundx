@@ -174,9 +174,9 @@ const BusinessCard = ({ business }: { business: any }) => {
 
                     {/* CTA Button */}
                     <div className="mt-6 w-full">
-                        <button className="w-full py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 font-semibold">
+                        <a href="/#contact" className="w-full py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 font-semibold block text-center">
                             Pitch Us Your Business
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
