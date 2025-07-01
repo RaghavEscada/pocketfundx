@@ -78,7 +78,7 @@ const About = () => {
       icon: Calendar
     },
     {
-      label: "Impressions",
+      label: "Impressions per month",
       value: "1M",
       icon: Building2
     },
@@ -194,9 +194,9 @@ const About = () => {
                 <div className="pt-4">
                   <a href="/#contact" className="group flex items-center text-white text-lg font-medium bg-gray-800/60 backdrop-blur-sm border border-gray-700 rounded-lg px-8 py-4 hover:bg-gray-800/80 hover:border-gray-600 transition-all duration-300">
                     <span className="border-b-2 border-white group-hover:border-gray-300 transition-colors duration-300 pb-1">
-                      Start Your Journey Today
+                      Start Reviewing Deals Today
                     </span>
-                    <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                   
                   </a>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, CheckCircle, DollarSign, Globe, Target, TrendingUp, Users, Award,  } from 'lucide-react';
+import { Briefcase, CheckCircle, DollarSign, Globe, Target, TrendingUp, Users,  } from 'lucide-react';
 
 const Metrics = () => {
     // Team data with photo URLs - replace with actual photos
@@ -241,7 +241,7 @@ const Metrics = () => {
                     <div className="text-center mb-24">
                         <div className="inline-flex items-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-md border border-blue-500/20 rounded-full px-8 py-4 mb-8 shadow-lg">
                             <Users className="w-6 h-6 text-blue-400 mr-3" />
-                            <Award className="w-5 h-5 text-purple-400 mr-2" />
+                           
                             <span className="text-sm font-semibold text-blue-300 tracking-wide">THE TEAM</span>
                         </div>
                         <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 tracking-tight">

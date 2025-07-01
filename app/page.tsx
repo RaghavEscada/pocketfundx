@@ -51,7 +51,7 @@ const Home = () => {
           </div>
         </div>
 
-        <TrackRecord />
+     
 
         {/* Calendly Embed Section */}
         <div id="contact" className="py-16 bg-slate-900 flex justify-center">
@@ -68,6 +68,8 @@ const Home = () => {
             ></iframe>
           </div>
         </div>
+
+        <TrackRecord />
 
       
 
