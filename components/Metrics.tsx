@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, CheckCircle, DollarSign, Globe, Target, TrendingUp, Users, , Award,  } from 'lucide-react';
+import { Briefcase, CheckCircle, DollarSign, Globe, Target, TrendingUp, Users, Award,  } from 'lucide-react';
 
 const Metrics = () => {
     // Team data with photo URLs - replace with actual photos
