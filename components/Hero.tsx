@@ -329,17 +329,12 @@ const Hero = () => {
                 </p>
               </AnimatedDiv>
 
-              {/* Description */}
-              <AnimatedDiv delay={400}>
-                <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
-                  End-to-end acquisition advisory for digital businesses under $10M. From sourcing and diligence to post-acquisition scale with complete acquisition support.
-                </p>
-              </AnimatedDiv>
+             
 
               {/* CTA Buttons */}
               <AnimatedDiv delay={500} className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button className="group px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
-                  Start Your Acquisition
+                  Start Your Search
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
                 <button className="group px-8 py-4 border-2 border-gray-200 text-gray-700 bg-white rounded-xl hover:border-blue-200 hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2">

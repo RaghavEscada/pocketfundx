@@ -184,7 +184,7 @@ const Metrics = () => {
                         <div className="absolute bottom-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-xl"></div>
                         <div className="relative z-10">
                             <h3 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight">
-                                Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500">Transform</span> Digital Commerce?
+                                Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500">Buy</span>a Business?
                             </h3>
                             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
                                 Join us in democratizing business acquisitions and building the future of micro private equity.
@@ -331,7 +331,7 @@ const Metrics = () => {
                                 <Users className="w-8 h-8 text-blue-400" />
                             </div>
                             <div className="text-4xl font-black text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">8</div>
-                            <div className="text-gray-300 font-semibold">Team Members</div>
+                            <div className="text-gray-300 font-semibold">Analysts</div>
                         </div>
                         <div className="text-center group">
                             <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-purple-600/30 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">

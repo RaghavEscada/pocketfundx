@@ -4,7 +4,7 @@ import { navItems } from "@/data";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
+import TrackRecord from "@/components/RecentProjects";
 import Testimonial from "@/components/Testimonial";
 
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
@@ -51,6 +51,8 @@ const Home = () => {
           </div>
         </div>
 
+        <TrackRecord />
+
         {/* Calendly Embed Section */}
         <div id="contact" className="py-16 bg-slate-900 flex justify-center">
           <div className="bg-white rounded-3xl shadow-xl border border-gray-200 p-4 max-w-2xl w-full">
@@ -66,6 +68,8 @@ const Home = () => {
             ></iframe>
           </div>
         </div>
+
+      
 
         {/* Footer */}
         <div className="bg-slate-900">

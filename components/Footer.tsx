@@ -31,7 +31,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold">PocketFund</h3>
-                <p className="text-sm text-gray-400">Micro-Acquisition Experts</p>
+                <p className="text-sm text-gray-400">We love deals.</p>
               </div>
             </div>
 
