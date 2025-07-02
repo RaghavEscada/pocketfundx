@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Image from "next/image";
 // Removed Next.js Image import since we'll use regular img tags
 
 const testimonials = [
@@ -122,7 +123,7 @@ const Testimonial = () => {
                             {/* Author info */}
                             <div className="flex flex-col items-center space-y-3 pt-4">
                                 <div className="relative">
-                                    <img
+                                    <Image
                                         src={image}
                                         width={64}
                                         height={64}

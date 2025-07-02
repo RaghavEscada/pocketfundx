@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Briefcase, CheckCircle, DollarSign, Globe, Target, TrendingUp, Users, Award, BarChart3, Eye, Trophy, Zap } from 'lucide-react';
+import Image from 'next/image';
 
 const Metrics = () => {
     // Team data with photo URLs
@@ -354,7 +355,8 @@ const Metrics = () => {
                                             {/* Photo/Avatar */}
                                             <div className="relative mb-8">
                                                 <div className="relative w-32 h-32 rounded-full overflow-hidden group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                                                    <img
+                                                    <Image
+                                                    
                                                         src={member.photo}
                                                         alt={member.name}
                                                         className="w-full h-full object-cover"
