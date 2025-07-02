@@ -356,7 +356,7 @@ const Metrics = () => {
                                             <div className="relative mb-8">
                                                 <div className="relative w-32 h-32 rounded-full overflow-hidden group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                                                     <Image
-                                                    
+
                                                         src={member.photo}
                                                         alt={member.name}
                                                         className="w-full h-full object-cover"
@@ -439,17 +439,8 @@ const Metrics = () => {
                         </div>
                     </div>
 
-                    {/* Call to Action */}
-                    <div className="mt-20 text-center">
-                        <div className="inline-flex items-center gap-4">
-                            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/25">
-                                Join Our Team
-                            </button>
-                            <button className="border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-                                Learn More
-                            </button>
-                        </div>
-                    </div>
+    
+                   
                 </div>
 
                 {/* Floating elements */}
