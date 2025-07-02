@@ -93,7 +93,7 @@ export const FloatingNav = ({
             {/* Center Logo */}
             <Link
               href="/"
-              className="flex items-center justify-center w-16 h-16 rounded-full border border-white/10 shadow-lg backdrop-blur-md bg-black/80 hover:bg-white/5 transition-all duration-200 flex-shrink-0 hover:scale-105"
+              className="flex items-center justify-center w-16 h-16 rounded-full border border-white/10 shadow-lg backdrop-blur-md bg-blue/80 hover:bg-white/5 transition-all duration-200 flex-shrink-0 hover:scale-105"
             >
               <div className="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center ">
                 <Image
