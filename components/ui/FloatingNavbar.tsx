@@ -81,7 +81,7 @@ export const FloatingNav = ({
                 <Link
                   key={idx}
                   href={navItem.link}
-                  className="relative text-neutral-300 hover:text-blue-400 items-center flex justify-center w-32 h-12 rounded-xl border border-white/10 shadow-lg backdrop-blur-md bg-black/80 transition-all duration-200 hover:bg-slate-200 "
+                  className="relative text-blue-900 hover:text-white items-center flex justify-center w-32 h-12 rounded-xl border border-white/10 shadow-lg backdrop-blur-md bg-slate-200 transition-all duration-200 hover:bg-black/80 "
                 >
                   <span className="text-sm font-medium">
                     {navItem.name}
@@ -112,7 +112,7 @@ export const FloatingNav = ({
                 <Link
                   key={idx}
                   href={navItem.link}
-                  className="relative text-neutral-300 hover:text-blue-400 items-center flex justify-center w-32 h-12 rounded-xl border border-white/10 shadow-lg backdrop-blur-md bg-black/80 transition-all duration-200 hover:bg-slate-200"
+                  className="relative text-blue-900 hover:text-white items-center flex justify-center w-32 h-12 rounded-xl border border-white/10 shadow-lg backdrop-blur-md bg-slate-200 transition-all duration-200 hover:bg-black/80"
                 >
                   <span className="text-sm font-medium">
                     {navItem.name}
