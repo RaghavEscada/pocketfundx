@@ -344,7 +344,7 @@ const Hero = () => {
                 </a>
                 <a href="/#timeline" className="group px-8 py-4 border-2 border-gray-200 text-gray-700 bg-white rounded-xl hover:border-blue-200 hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2">
                   <Play className="w-5 h-5" />
-                  Watch Our Process
+                  Our Process
                 </a>
               </AnimatedDiv>
             </div>

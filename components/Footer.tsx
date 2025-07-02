@@ -9,7 +9,7 @@ const Footer = () => {
     { name: "Track Record", href: "#track-record" },
     { name: "Team", href: "#team" },
     { name: "Contact", href: "#contact" },
-    { name: "Blog", href: "#blog" }
+
   ];
 
   return (
@@ -97,16 +97,9 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Legal Links */}
-            <div>
-              <h5 className="text-sm font-medium mb-3 text-gray-300">Legal</h5>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+           
+</div>
+</div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
