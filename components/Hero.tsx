@@ -319,7 +319,7 @@ const Hero = () => {
                 </div>
                 <div className="flex justify-start">
                   <ContainerTextFlip
-                    words={["Growing Assets", "Market Leaders", "Success Stories"]}
+                    words={["Aquisitions", "Deal Flow", "Portfolio Companies", "Strategic Roll-Ups", "Successful Exits"]}
                     interval={1800}
                     animationDuration={400}
                     className="text-3xl md:text-4xl lg:text-5xl"
