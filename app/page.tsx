@@ -4,13 +4,14 @@ import { navItems } from "@/data";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
-import TrackRecord from "@/components/RecentProjects";
+
 import Testimonial from "@/components/Testimonial";
 
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Horizontal from "@/components/horizontal";
 import TimelineDemo from "@/components/ui/timeline";
 import Metrics from "@/components/Metrics";
+import RecentProjects from "@/components/RecentProjects";
 
 const Home = () => {
   return (
@@ -37,8 +38,15 @@ const Home = () => {
 
       {/* Main Content Sections */}
       <section className="relative w-full">
-        {/* Recent Projects */}
-        <div className="py-24 bg-slate-900" id="recentprojects">
+        {/* Who We Serve */}
+        <div className="py-24 bg-slate-900" id="whoweserve">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <RecentProjects />
+          </div>
+        </div>
+
+        {/* Team */}
+        <div className="py-24 bg-slate-900" id="team">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Metrics />
           </div>
@@ -51,7 +59,7 @@ const Home = () => {
           </div>
         </div>
 
-     
+
 
         {/* Calendly Embed Section */}
         <div id="contact" className="py-16 bg-slate-900 flex justify-center">
@@ -69,10 +77,10 @@ const Home = () => {
           </div>
         </div>
 
-        <TrackRecord />
+        {/* <TrackRecord /> */}
 
-      
 
+       
         {/* Footer */}
         <div className="bg-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

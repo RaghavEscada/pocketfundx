@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowRight, Target, TrendingUp, Users, CheckCircle, Zap, DollarSign, Calendar, Award, Star, Globe, Briefcase, Building2 } from 'lucide-react';
-import BusinessAcquisitionTimeline from './ui/timeline';
 
 const About = () => {
   const [isVisible, setIsVisible] = React.useState(true);
@@ -66,6 +65,7 @@ const About = () => {
       status: "Acquired"
     }
   ];
+
   const stats = [
     {
       label: "Strong community around buying businesses",
@@ -88,7 +88,6 @@ const About = () => {
       icon: Target
     }
   ];
-
 
   const services = [
     {
@@ -190,13 +189,13 @@ const About = () => {
                   </p>
                 </div>
 
-                {/* Simple CTA Button */}
+                {/* Simple Prominent CTA Button */}
                 <div className="pt-4">
-                  <a href="/#contact" className="group flex items-center text-white text-lg font-medium bg-gray-800/60 backdrop-blur-sm border border-gray-700 rounded-lg px-8 py-4 hover:bg-gray-800/80 hover:border-gray-600 transition-all duration-300">
-                    <span className="border-b-2 border-white group-hover:border-gray-300 transition-colors duration-300 pb-1">
+                  <a href="/#contact" className="group inline-flex items-center text-white text-lg font-semibold bg-blue-600 hover:bg-blue-500 border border-blue-500 hover:border-blue-400 rounded-lg px-10 py-4 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <span className="border-b-2 border-white/70 group-hover:border-white transition-colors duration-300 pb-1">
                       Start Reviewing Deals Today
                     </span>
-                   
+                    <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </div>
               </div>
@@ -241,7 +240,30 @@ const About = () => {
             </div>
           </div>
         </div>
+      </div>
 
+      {/* What We Do */}
+      <div className="py-20 px-6 md:px-12 lg:px-16 xl:px-24">
+        <div className="max-w-8xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+              What We <span className="text-blue-400">Do</span>
+            </h2>
+            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
+              We're not just investors, we're builders
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index) => (
+              <div key={service.title} className="relative group bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl p-8 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <service.icon className="w-12 h-12 text-blue-400 mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300" />
+                <h3 className="text-xl font-bold text-white mb-4 relative z-10">{service.title}</h3>
+                <p className="text-gray-400 leading-relaxed relative z-10">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Mission & Vision */}
@@ -256,7 +278,7 @@ const About = () => {
               Mission &amp; <span className="text-blue-400">Vision</span>
             </h2>
             <p className="text-gray-400 text-xl max-w-3xl mx-auto animate-[fadeInUp_0.8s_ease-out_0.4s_both]">
-              What drives us forward and where we&apos;re headed
+              What drives us forward and where we're headed
             </p>
           </div>
           {/* New Layout - Stacked with Central Divider */}
@@ -354,37 +376,8 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      {/* What We Do */}
-      <div className="py-20 px-6 md:px-12 lg:px-16 xl:px-24">
-        <div className="max-w-8xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              What We <span className="text-blue-400">Do</span>
-            </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              We&apos;re not just investors, we&apos;re builders
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
-              <div key={service.title} className="relative group bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl p-8 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <service.icon className="w-12 h-12 text-blue-400 mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-xl font-bold text-white mb-4 relative z-10">{service.title}</h3>
-                <p className="text-gray-400 leading-relaxed relative z-10">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
     </div>
-
-
-
-  )
+  );
 };
-
 
 export default About;

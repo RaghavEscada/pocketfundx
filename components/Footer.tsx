@@ -125,7 +125,7 @@ const Footer = () => {
               <LinkedInIcon />
             </a>
             <a
-              href="https://twitter.com/pocketfund"
+              href="https://x.com/devlikesbizness"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
@@ -133,7 +133,7 @@ const Footer = () => {
               <TwitterIcon />
             </a>
             <a
-              href="https://youtube.com/@pocketfund"
+              href="https://www.youtube.com/@devlikesbizness/featured"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
@@ -143,16 +143,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-6 flex justify-center">
-          <a
-            href="/#contact"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow transition-all duration-300"
-          >
-            Book a Call
-          </a>
-        </div>
+
       </div>
     </footer>
   );

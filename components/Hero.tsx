@@ -79,10 +79,10 @@ export function ContainerTextFlip({
   );
 }
 
-// Lottie Player Component - Using your exact iframe with optimal size
+// ie Player Component - Using your exact iframe with hidden badge
 const LottiePlayer = ({ src }: { src: string }) => {
   return (
-    <div className="w-full h-full rounded-2xl overflow-hidden">
+    <div className="w-full h-full rounded-2xl overflow-hidden relative">
       <iframe
         src="https://cdn.lottielab.com/l/5Gn1jXUt1kSREm.html"
         className="w-full h-full border-0"
@@ -90,6 +90,8 @@ const LottiePlayer = ({ src }: { src: string }) => {
         frameBorder="0"
         style={{ minHeight: '380px' }}
       />
+      {/* Precise overlay to hide only the "made with lottie" badge */}
+      <div className="absolute bottom-1 right-1 w-36 h-16 bg-white ounded-sm opacity-100"></div>
     </div>
   );
 };
@@ -310,14 +312,17 @@ const Hero = () => {
                 </h1>
               </AnimatedDiv>
 
-              {/* Dynamic Subheadline */}
-              <AnimatedDiv delay={200} className="text-2xl md:text-3xl text-gray-700 font-medium">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span>Transforms Ideas Into</span>
+              {/* Dynamic Subheadline - Restructured */}
+              <AnimatedDiv delay={200} className="space-y-4">
+                <div className="text-2xl md:text-3xl text-gray-700 font-medium">
+                  Transforms Ideas Into
+                </div>
+                <div className="flex justify-start">
                   <ContainerTextFlip
                     words={["Growing Assets", "Market Leaders", "Success Stories"]}
                     interval={1800}
                     animationDuration={400}
+                    className="text-3xl md:text-4xl lg:text-5xl"
                   />
                 </div>
               </AnimatedDiv>
@@ -329,18 +334,18 @@ const Hero = () => {
                 </p>
               </AnimatedDiv>
 
-             
+
 
               {/* CTA Buttons */}
               <AnimatedDiv delay={500} className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="group px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+                <a href="/#contact" className="group px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
                   Start Your Search
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
-                <button className="group px-8 py-4 border-2 border-gray-200 text-gray-700 bg-white rounded-xl hover:border-blue-200 hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2">
+                </a>
+                <a href="/#timeline" className="group px-8 py-4 border-2 border-gray-200 text-gray-700 bg-white rounded-xl hover:border-blue-200 hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2">
                   <Play className="w-5 h-5" />
                   Watch Our Process
-                </button>
+                </a>
               </AnimatedDiv>
             </div>
 

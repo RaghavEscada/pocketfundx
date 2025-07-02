@@ -4,16 +4,16 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const testimonials = [
     {
-        name: "Kenny Wise",
+        name: "Jhonny Wise",
         email: "Engineering Analyst",
-        image: "https://ui-avatars.com/api/?name=Kenny+Wise",
+        image: "/j.png",
         description: `A month ago, I wouldn't have even known where to look to buy a business. Now, I'm closing my first acquisition! Dev supported me through the entire process, saving me time and money—he even negotiated the price from $13k to $5k. The community and guidance made the process much less intimidating. Highly recommend!`
     },
     {
-        name: "Kenny H",
+        name: "Kenny Ostyn Harsono",
         email: "Engineer",
-        image: "https://ui-avatars.com/api/?name=Kenny+H",
-        description: `My first months with Acquisition Accelerator have been phenomenal. I learned the mindset and methods to find and talk to sellers. It's one of the only complete resources out there—highly recommend!`
+        image: "/k.png",
+        description: `My first months with Pocket fund have been phenomenal. I learned the mindset and methods to find and talk to sellers. It's one of the only complete resources out there—highly recommend!`
     },
     {
         name: "Naman",
