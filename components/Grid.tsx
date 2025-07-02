@@ -250,7 +250,7 @@ const About = () => {
               What We <span className="text-blue-400">Do</span>
             </h2>
             <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              We're not just investors, we're builders
+              We are not just investors. We are builders
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -278,7 +278,7 @@ const About = () => {
               Mission &amp; <span className="text-blue-400">Vision</span>
             </h2>
             <p className="text-gray-400 text-xl max-w-3xl mx-auto animate-[fadeInUp_0.8s_ease-out_0.4s_both]">
-              What drives us forward and where we're headed
+              What drives us forward and where we are headed
             </p>
           </div>
           {/* New Layout - Stacked with Central Divider */}
